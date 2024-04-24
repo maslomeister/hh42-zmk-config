@@ -36,7 +36,7 @@
                                 , <&macro_tap &kp SPACE>
                                 , <&macro_release &kp LGUI>
                                 ;
-                }
+                };
                 srccut: srccut {
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
@@ -47,7 +47,7 @@
                                 , <&macro_release &kp LSHFT>
                                 , <&macro_release &kp LGUI>
                                 ;
-                }
+                };
         };
 
         conditional_layers {
@@ -62,11 +62,6 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &mt LGUI RBKT   &kp Q &kp W &kp E &kp R &kp T                  &kp Y &kp U  &kp I     &kp O   &kp P    &kp LBKT 
    &mt LCTRL GRAVE &kp A &kp S &kp D &kp F &kp G                  &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SINGLE_QUOTE
@@ -74,12 +69,8 @@
         &lt RAISE TAB &mt LSFHIFT SPACE &lt LOWER ENTER                  &lt LOWER ESC &kp BACKSPACE &lt RAISE DEL
                         >;
                 };
+
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &none &none &none &none &none &kp F5        &kp EXCL   &kp AT   &kp Hash &kp DLLR    &kp PERCENT &kp RGUI
    &none &none &none &none &kp F2 &clrpckr        &kp CRRT &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RPAR &kp RCTRL
@@ -89,11 +80,6 @@
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp  LGUI  &kp ASTERISK &kp N7 &kp N8 &kp N9 &kp PLUS   &kp C_VOL_UP &kp HOME  &kp UP &kp PG_UP &none &kp RGUI
    &kp LCTRL &kp SLASH &kp N4 &kp N5 &kps N6 &kp MINUS      &kp C_MUTE &kp LEFT &kp DOWN  &kp RIGHT &none &kp RCTRL
@@ -103,11 +89,6 @@
                 };
 
                 combined_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &srccut  &kp F1 &kp F2 &kp F3 &kp F4 &none   &kp KP_NUM &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
    &none &kp F5  &kp F6 &kp F7   &kp F8 &none   &kp SCROLLLOCK &bt BT_SEL 4 &none  &none &none &none
