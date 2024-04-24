@@ -13,6 +13,11 @@
 #define RAISE   2
 #define COMBINED 3
 
+&mt {
+    tapping-term-ms = <180>;
+    flavor = "balanced";
+};
+
 / {
     macros {
         clrpckr: clrpckr {
